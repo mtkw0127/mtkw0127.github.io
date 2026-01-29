@@ -4,56 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>体型管理アプリ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
         }
         h1 {
-            color: #333;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
             text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            animation: fadeInDown 0.8s ease;
         }
         .app-description {
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            border-radius: 8px;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease;
         }
         .app-description p {
-            text-align: justify;
+            color: #444;
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            line-height: 2;
         }
-        .store-link {
-            text-align: center;
-            margin-top: 20px;
+        .app-description p:last-child {
+            margin-bottom: 0;
+        }
+        .store-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 350px;
+            margin: 0 auto;
         }
         .store-link a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
+            display: block;
+            padding: 16px 30px;
+            text-align: center;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease;
         }
-        .store-link a:hover {
-            background-color: #45a049;
+        .app-store {
+            background: linear-gradient(135deg, #000000 0%, #434343 100%);
+            color: white;
+        }
+        .app-store:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+        .google-play {
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+            color: white;
+        }
+        .google-play:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(66,133,244,0.4);
+        }
+        .privacy-link {
+            margin-top: 20px;
+        }
+        .privacy-link a {
+            background: linear-gradient(135deg, #666 0%, #888 100%);
+            color: white;
+        }
+        .privacy-link a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102,102,102,0.3);
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+            .app-description {
+                padding: 25px;
+            }
+            .app-description p {
+                font-size: 1rem;
+            }
+            .store-links {
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+            .app-description {
+                padding: 20px;
+            }
+            .store-link a {
+                padding: 14px 20px;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>体型管理アプリ</h1>
-    <div class="app-description">
-        <p>体型管理アプリは、健康的な生活をサポートするための便利なツールです。このアプリを使用すると、食事や運動の記録を簡単に管理できます。また、体重や体脂肪率のトラッキングも可能で、目標達成のための進捗をリアルタイムで確認できます。</p>
-        <p>さらに、体型管理アプリは使いやすいインターフェースと豊富な機能を提供し、ユーザーが自分の健康状態を効果的に管理できるように設計されています。</p>
-    </div>
-    <div class="store-link">
-        <a href="https://play.google.com/store/apps/details?id=com.app.body_manage" target="_blank">Google Playで体型管理アプリをダウンロードする</a>
-    </div>
-    <div class="store-link">
-        <a href="privacy-policy.html" style="background-color: #666;">プライバシーポリシー</a>
+    <div class="container">
+        <h1>体型管理アプリ</h1>
+
+        <div class="app-description">
+            <p>体型管理アプリは、健康的な生活をサポートするための便利なツールです。このアプリを使用すると、食事や運動の記録を簡単に管理できます。また、体重や体脂肪率のトラッキングも可能で、目標達成のための進捗をリアルタイムで確認できます。</p>
+            <p>さらに、体型管理アプリは使いやすいインターフェースと豊富な機能を提供し、ユーザーが自分の健康状態を効果的に管理できるように設計されています。</p>
+        </div>
+
+        <div class="store-links">
+            <div class="store-link">
+                <a href="https://apps.apple.com/jp/app/%E4%BD%93%E5%9E%8B%E7%AE%A1%E7%90%86-%E4%BD%93%E9%87%8D%E3%81%A8%E3%82%AB%E3%83%AD%E3%83%AA%E3%83%BC%E7%AE%A1%E7%90%86%E3%81%A7%E7%B0%A1%E5%8D%98%E3%83%80%E3%82%A4%E3%82%A8%E3%83%83%E3%83%88/id6757862346" target="_blank" class="app-store">App Storeでダウンロード</a>
+            </div>
+            <div class="store-link">
+                <a href="https://play.google.com/store/apps/details?id=com.app.body_manage" target="_blank" class="google-play">Google Playでダウンロード</a>
+            </div>
+            <div class="store-link privacy-link">
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
