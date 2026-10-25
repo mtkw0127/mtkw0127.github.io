@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mimamori - 見守りカメラアプリ</title>
+    <meta name="description" content="使っていないスマートフォンを見守りカメラにして、別の部屋から家族やペットの様子を確認できるアプリです。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            animation: fadeInDown 0.8s ease;
+        }
+        .tagline {
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.8s ease;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease;
+        }
+        .card h2 {
+            color: #0f766e;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #14b8a6;
+        }
+        .card p {
+            color: #444;
+            font-size: 1.05rem;
+            font-weight: 300;
+            margin-bottom: 16px;
+            line-height: 2;
+        }
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+        .features {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .features li {
+            background: #f0fdfa;
+            border-radius: 12px;
+            padding: 18px 20px;
+        }
+        .features h3 {
+            color: #0f766e;
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .features p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+        .note {
+            font-size: 0.9rem !important;
+            color: #666 !important;
+        }
+        .store-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+        .store-link a {
+            display: block;
+            padding: 16px 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease;
+        }
+        .status {
+            text-align: center;
+            margin: -24px 0 40px;
+            animation: fadeInDown 0.8s ease;
+        }
+        .status span {
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.6);
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .coming-soon {
+            display: block;
+            padding: 16px 30px;
+            text-align: center;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.85);
+            color: #0f766e;
+            animation: fadeInUp 1s ease;
+        }
+        .privacy-link {
+            margin-top: 20px;
+        }
+        .privacy-link a {
+            background: linear-gradient(135deg, #666 0%, #888 100%);
+            color: white;
+        }
+        .privacy-link a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102,102,102,0.3);
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .tagline {
+                margin-bottom: 30px;
+            }
+            .card {
+                padding: 25px;
+            }
+            .card p {
+                font-size: 1rem;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+            .store-links {
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+            .card {
+                padding: 20px;
+            }
+            .store-link a {
+                padding: 14px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mimamori</h1>
+        <p class="tagline">スマートフォンを、家の中の見守りカメラに。</p>
+        <p class="status"><span>開発中</span></p>
+
+        <div class="card">
+            <p>Mimamori は、使っていないスマートフォンを見守りカメラにして、別の部屋から家族やペットの様子を確認できるアプリです。</p>
+            <p>部屋に置く端末を「見守りカメラ」、手元の端末を「見守り画面」にするだけ。映像は家の Wi-Fi の中で端末どうしが直接やり取りするので、インターネットやサーバーを経由せず、どこにも保存されません。</p>
+        </div>
+
+        <div class="card">
+            <h2>主な機能</h2>
+            <ul class="features">
+                <li>
+                    <h3>Wi-Fi 内で直接つながる</h3>
+                    <p>同じ Wi-Fi にある見守りカメラを自動で見つけます。アカウント登録は不要です。</p>
+                </li>
+                <li>
+                    <h3>6 桁の番号でペアリング</h3>
+                    <p>見守りカメラに表示された番号を入力した端末だけが映像を見られます。次回からは選ぶだけで接続できます。</p>
+                </li>
+                <li>
+                    <h3>顔が見えないとお知らせ</h3>
+                    <p>見守りカメラに顔がしばらく映らないと、見守り画面に通知します。接続が切れたときもお知らせします。</p>
+                </li>
+                <li>
+                    <h3>手元からズーム操作</h3>
+                    <p>見守り画面から、見守りカメラのズームを遠隔で操作できます。前面・背面カメラの切り替えにも対応しています。</p>
+                </li>
+                <li>
+                    <h3>見る端末をいつでも管理</h3>
+                    <p>ペアリング済みの端末を一覧で確認し、不要になった端末はいつでも削除できます。</p>
+                </li>
+                <li>
+                    <h3>映像は保存しない</h3>
+                    <p>映像は暗号化して端末間で直接送られ、録画やクラウドへの保存は行いません。音声も取得しません。</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>ご利用にあたって</h2>
+            <p>2 台の端末を同じ Wi-Fi に接続してご利用ください。外出先からの視聴には対応していません。</p>
+            <p class="note">顔検出による通知は見守りの補助機能です。乳幼児突然死症候群（SIDS）や事故を防ぐ医療機器・安全装置ではなく、大人による見守りの代わりにはなりません。ときどき直接様子を確かめてください。</p>
+        </div>
+
+        <div class="store-links">
+            <div class="store-link">
+                <p class="coming-soon">現在開発中です。公開まで今しばらくお待ちください。</p>
+            </div>
+            <div class="store-link privacy-link">
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

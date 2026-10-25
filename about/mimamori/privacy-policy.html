@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - Mimamori</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            animation: fadeInUp 0.8s ease;
+        }
+        h1 {
+            color: #0f766e;
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #14b8a6;
+        }
+        h2 {
+            color: #0f766e;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        h3 {
+            color: #0d9488;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        p {
+            color: #444;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        li {
+            color: #555;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        strong {
+            font-weight: 600;
+        }
+        .summary {
+            background: #f0fdfa;
+            border-left: 4px solid #14b8a6;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .summary ul {
+            margin: 0;
+        }
+        .contact {
+            background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 40px;
+            border-left: 4px solid #14b8a6;
+        }
+        .contact h2 {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        .contact p strong {
+            color: #0f766e;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .back-link a {
+            display: inline-block;
+            padding: 14px 30px;
+            background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(15,118,110,0.3);
+        }
+        .back-link a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(15,118,110,0.4);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+            .container {
+                padding: 30px 25px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            h3 {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 15px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
+            ul {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>プライバシーポリシー</h1>
+
+        <p>Tomonori Matsukawa（以下、「開発者」）は、見守りカメラアプリ「Mimamori」（以下、「本アプリ」）を開発しました。本アプリは無料で提供されており、広告およびアプリ内課金は含まれていません。</p>
+
+        <p>本ページは、本アプリを利用するユーザー（以下、「ユーザー」）に対し、情報の収集、使用、保存、共有、削除に関する方針を説明するものです。本アプリを使用することで、本プライバシーポリシーに基づく情報の取り扱いに同意したものとみなされます。</p>
+
+        <div class="summary">
+            <ul>
+                <li>カメラの映像は、同じ Wi-Fi 内でペアリングした端末どうしで直接（P2P）、暗号化して送信されます。開発者のサーバーや第三者へ送信されることはありません。</li>
+                <li>映像・画像は録画・保存されません。音声は取得しません。</li>
+                <li>顔検出は端末内だけで行い、映像や顔の情報を外部に送信しません。</li>
+                <li>アカウント登録はなく、氏名・メールアドレス・位置情報・連絡先などの個人情報は収集しません。</li>
+                <li>アプリの品質改善のため、Firebase Analytics および Firebase Crashlytics で匿名の利用状況とクラッシュ情報を収集します。広告 ID は収集しません。</li>
+            </ul>
+        </div>
+
+        <h2>本アプリの仕組み</h2>
+        <p>本アプリは、同じ Wi-Fi に接続した 2 台の端末のうち、一方を「見守りカメラ」、もう一方を「見守り画面」として使用し、見守りカメラの映像を見守り画面に表示するアプリです。端末どうしは WebRTC により直接接続され、映像の中継や保存のためのサーバーは使用していません。</p>
+
+        <h2>端末の権限と、その利用目的</h2>
+
+        <h3>カメラ</h3>
+        <ul>
+            <li><strong>利用目的:</strong> 見守りカメラとして使用する端末で映像を撮影し、ペアリング済みの見守り画面へ配信するため、および端末内での顔検出のために使用します。</li>
+            <li><strong>送信先:</strong> 映像は、同じ Wi-Fi 内でペアリング済みの端末にのみ、P2P で送信されます。通信は WebRTC の標準仕様（DTLS-SRTP）により暗号化されます。</li>
+            <li><strong>保存:</strong> 映像・画像を録画、撮影、保存することはありません。</li>
+            <li><strong>許可しない場合:</strong> 見守りカメラとしては使用できませんが、見守り画面としては引き続きご利用いただけます。</li>
+        </ul>
+        <p>本アプリはマイクの権限を要求せず、音声を取得・送信しません。</p>
+
+        <h3>ローカルネットワーク（Wi-Fi・ネットワーク状態）</h3>
+        <ul>
+            <li><strong>利用目的:</strong> 同じ Wi-Fi 内にある本アプリの端末を見つけ（mDNS）、ペアリング、接続認証、映像の送受信を行うために使用します。</li>
+            <li><strong>ネットワーク内に公開される情報:</strong> 見守りカメラは、同じ Wi-Fi 内の端末から見つけられるよう、端末の機種名を含む表示名（例:「Mimamori-機種名」）と、本アプリが生成したランダムな端末 ID を、同じネットワーク内にのみ告知します。これらがインターネット上に公開されることはありません。</li>
+        </ul>
+
+        <h3>通知</h3>
+        <ul>
+            <li><strong>利用目的:</strong> 見守り画面で、「顔が見えない」状態や接続が切れたことをお知らせするために使用します。</li>
+            <li>通知は端末内で表示されるもので、プッシュ通知サービス（FCM など）やサーバーは使用しません。</li>
+        </ul>
+
+        <h2>顔検出について</h2>
+        <p>見守りカメラは、映像に顔が映っているかどうかを判定するため、Google の ML Kit（顔検出モデルをアプリに同梱した版）を使用して、端末内で顔検出を行います。</p>
+        <ul>
+            <li>顔検出は端末内だけで完結し、映像・画像・顔の特徴量を開発者、Google、その他の第三者へ送信することはありません。</li>
+            <li>顔検出の結果は保存されず、個人の識別や認証には使用しません。見守り画面へは「顔が見えている／見えない」という状態のみを送信します。</li>
+            <li>顔検出は、見守りカメラの設定からいつでも無効にできます。</li>
+        </ul>
+        <p>本アプリの顔検出は見守りの補助機能であり、乳幼児突然死症候群（SIDS）や事故を防ぐ医療機器・安全装置ではありません。</p>
+
+        <h2>端末内に保存する情報</h2>
+        <p>本アプリは、以下の情報をお使いの端末内にのみ保存します。これらが開発者のサーバーへ送信されることはありません。</p>
+        <ul>
+            <li><strong>端末 ID と認証用の鍵:</strong> ペアリングと接続時の認証のため、ランダムな端末 ID と、署名用の鍵ペアを生成します。秘密鍵は端末の Android Keystore 内に保管され、端末の外に出ることはありません。</li>
+            <li><strong>ペアリング済み端末の一覧:</strong> ペアリングした相手の端末 ID、表示名、公開鍵、ペアリング日時。</li>
+            <li><strong>アプリの設定:</strong> チュートリアルの表示状態、顔検出の有効・無効など。</li>
+        </ul>
+        <p>ペアリングに使用する 6 桁の番号（ワンタイムパスワード）は一時的なもので、保存されず、通信路上にそのまま送信されることもありません。本アプリのデータは、Google のクラウドバックアップの対象外としています。</p>
+
+        <h2>第三者サービスによる情報の収集</h2>
+        <p>本アプリでは、アプリの安定性と使いやすさを改善するため、以下の第三者サービスを利用しています。</p>
+
+        <h3>Google Analytics for Firebase（アプリのインタラクション・デバイス情報）</h3>
+        <p>画面の表示や操作など、本アプリの利用状況に関する情報を収集します。これには、デバイスの種類、OS のバージョン、アプリのバージョン、Firebase インストール ID 等の匿名識別子が含まれる場合があります。これらは利用状況の分析とアプリの改善のためにのみ利用します。</p>
+
+        <h3>Firebase Crashlytics（クラッシュログ・診断情報）</h3>
+        <p>アプリがクラッシュした際に、スタックトレース、発生日時、デバイスの種類、OS のバージョン等の技術情報を収集します。これらは不具合の修正と安定性の改善のためにのみ利用します。</p>
+
+        <h3>これらのサービスについて</h3>
+        <ul>
+            <li>広告 ID は収集しません。また、収集した情報を広告目的で使用することはありません。</li>
+            <li>カメラの映像・画像、顔検出の結果、ペアリング情報をこれらのサービスへ送信することはありません。</li>
+            <li>これらの情報は、個人を直接特定する目的では使用しません。また、第三者に販売することはありません。</li>
+            <li>これらの情報は、HTTPS により暗号化して Google のサーバーへ送信されます。</li>
+        </ul>
+        <p>各サービスにおける情報の取り扱いについては、<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシーとセキュリティ</a>および<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>をご確認ください。</p>
+
+        <h2>情報の共有・開示</h2>
+        <p>開発者は、上記の第三者サービスへの送信を除き、ユーザーの情報を第三者に共有、販売、または譲渡することはありません。ただし、法令に基づき開示が必要な場合はこの限りではありません。</p>
+
+        <h2>セキュリティ</h2>
+        <p>本アプリは、ペアリングしていない端末が映像を視聴できないよう、ワンタイムパスワードによるペアリングと公開鍵による接続認証を行っています。また、映像の通信は暗号化されています。開発者は合理的な手段を用いて情報の保護に努めていますが、電子的な通信や保存の方法が完全に安全であることを保証するものではありません。</p>
+
+        <h2>データの保持</h2>
+        <p>端末内に保存された情報は、ユーザーが削除するか本アプリをアンインストールするまで保持されます。Firebase Analytics および Firebase Crashlytics で収集された情報は、各サービスの定める保持期間に従って保持されます。</p>
+
+        <h2>データの削除について</h2>
+        <p>本アプリにはアカウント登録機能はありません。ユーザーは、以下の方法でご自身のデータをいつでも削除できます。</p>
+
+        <h3>端末内に保存されたデータの削除</h3>
+        <ul>
+            <li>本アプリの「ペアリング管理」から、ペアリング済みの端末を個別に削除できます。見守りカメラ側で削除すると、その端末は映像を視聴できなくなります。</li>
+            <li>すべてのデータを削除する場合は、端末の「設定」→「アプリ」→「Mimamori」→「ストレージ」→「データを削除」を実行してください。</li>
+            <li>本アプリをアンインストールすると、端末内に保存されたデータ（認証用の鍵を含む）はすべて削除されます。</li>
+        </ul>
+
+        <h3>第三者サービスに送信されたデータの削除</h3>
+        <p>Firebase Analytics および Firebase Crashlytics に送信された匿名の利用状況データ・クラッシュログの削除をご希望の場合は、下記のお問い合わせ先まで、件名を「Mimamori データ削除リクエスト」としてメールでご連絡ください。対象データの特定のため、必要に応じて追加の情報（アプリのバージョン、端末の種類等）をお伺いする場合があります。</p>
+        <p>ご依頼を受領後、原則として 30 日以内に該当データを削除し、その旨をご連絡します。なお、法令により保持が義務付けられている情報については、必要な期間保持する場合があります。</p>
+
+        <h2>子どものプライバシー</h2>
+        <p>本アプリは 13 歳未満の子どもを対象としたものではなく、13 歳未満の子どもから意図的に個人情報を収集することはありません。本アプリは、保護者などの大人が家族やペットの様子を見守るために使用することを想定しています。</p>
+
+        <h2>他サイトへのリンク</h2>
+        <p>本アプリには、外部サイトへのリンクは含まれていません。</p>
+
+        <h2>プライバシーポリシーの変更</h2>
+        <p>本プライバシーポリシーは、必要に応じて更新されることがあります。変更があった場合は、本ページにて速やかに告知します。</p>
+        <p>最終更新日: 2026年10月25日</p>
+
+        <div class="contact">
+            <h2>お問い合わせ</h2>
+            <p>本プライバシーポリシーに関するお問い合わせは、以下までご連絡ください。</p>
+            <p><strong>Email:</strong> maccho.chekera@gmail.com</p>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">Mimamori のページに戻る</a>
+        </div>
+    </div>
+</body>
+</html>
