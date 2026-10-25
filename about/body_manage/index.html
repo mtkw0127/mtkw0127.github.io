@@ -88,6 +88,40 @@
             line-height: 1.8;
             margin-bottom: 0;
         }
+        .status {
+            text-align: center;
+            margin: -24px 0 40px;
+            animation: fadeInDown 0.8s ease;
+        }
+        .status span {
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.6);
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .info {
+            list-style: none;
+        }
+        .info li {
+            display: flex;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            color: #444;
+            font-weight: 300;
+        }
+        .info li:last-child {
+            border-bottom: none;
+        }
+        .info .label {
+            flex: 0 0 7em;
+            color: #764ba2;
+            font-weight: 600;
+        }
         .note {
             font-size: 0.9rem !important;
             color: #666 !important;
@@ -199,6 +233,7 @@
     <div class="container">
         <h1>体型管理</h1>
         <p class="tagline">体重・体型写真・食事を、ひとつのアプリで。</p>
+        <p class="status"><span>iOS / Android で配信中</span></p>
 
         <div class="card">
             <p>体型管理は、体重や体脂肪率、体型の写真、毎日の食事とカロリーをまとめて記録できるアプリです。カレンダーやグラフで変化をひと目で確認でき、無理なく続けられる体づくりをサポートします。</p>
@@ -241,6 +276,24 @@
                     <p>記録と写真をまとめたバックアップファイルを好きな場所に保存し、機種変更時などに復元できます。</p>
                 </li>
             </ul>
+        </div>
+
+        <div class="card">
+            <h2>アプリ情報</h2>
+            <ul class="info">
+                <li><span class="label">対応OS</span><span>iOS 15.0 以上 / Android 8.1 以上</span></li>
+                <li><span class="label">料金</span><span>無料（バナー広告あり・アプリ内課金なし）</span></li>
+                <li><span class="label">アカウント</span><span>登録不要</span></li>
+                <li><span class="label">データの保存先</span><span>お使いの端末内のみ（サーバーへの送信なし）</span></li>
+                <li><span class="label">連携</span><span>ヘルスコネクト（Android）・ヘルスケア（iOS）から歩数を読み取り</span></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>ご利用にあたって</h2>
+            <p>記録はすべて端末内に保存されるため、アプリを削除したり機種変更したりすると記録は失われます。設定画面の「データ管理」から、定期的にバックアップを保存しておくことをおすすめします。</p>
+            <p>歩数の表示には、ヘルスコネクト（Android）またはヘルスケア（iOS）へのアクセス許可が必要です。許可しない場合も、歩数以外の機能はそのままご利用いただけます。</p>
+            <p class="note">本アプリは日々の記録を目的としたもので、医療上の助言や診断を行うものではありません。健康上の判断は医師などの専門家にご相談ください。</p>
         </div>
 
         <div class="store-links">
