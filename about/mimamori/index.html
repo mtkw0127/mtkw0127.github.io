@@ -111,31 +111,13 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             animation: fadeInUp 1s ease;
         }
-        .status {
-            text-align: center;
-            margin: -24px 0 40px;
-            animation: fadeInDown 0.8s ease;
-        }
-        .status span {
-            display: inline-block;
-            padding: 4px 16px;
-            border-radius: 999px;
-            background: rgba(255,255,255,0.2);
-            border: 1px solid rgba(255,255,255,0.6);
+        .google-play {
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
             color: white;
-            font-size: 0.9rem;
-            font-weight: 600;
         }
-        .coming-soon {
-            display: block;
-            padding: 16px 30px;
-            text-align: center;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1rem;
-            background: rgba(255,255,255,0.85);
-            color: #0f766e;
-            animation: fadeInUp 1s ease;
+        .google-play:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(66,133,244,0.4);
         }
         .privacy-link {
             margin-top: 20px;
@@ -209,7 +191,6 @@
     <div class="container">
         <h1>Mimamori</h1>
         <p class="tagline">スマートフォンを、家の中の見守りカメラに。</p>
-        <p class="status"><span>開発中</span></p>
 
         <div class="card">
             <p>Mimamori は、使っていないスマートフォンを見守りカメラにして、別の部屋から家族やペットの様子を確認できるアプリです。</p>
@@ -254,7 +235,7 @@
 
         <div class="store-links">
             <div class="store-link">
-                <p class="coming-soon">現在開発中です。公開まで今しばらくお待ちください。</p>
+                <a href="https://play.google.com/store/apps/details?id=io.github.mtkw0127.mimamori" target="_blank" rel="noopener" class="google-play">Google Playでダウンロード</a>
             </div>
             <div class="store-link privacy-link">
                 <a href="privacy-policy.html">プライバシーポリシー</a>
